@@ -1,0 +1,33 @@
+version: '3'
+services:
+  ss-server:
+    container_name: 'ss-server'
+    build: './ss-server'
+    image: 'ss-server'
+    ports:
+      - '8388:8388'
+    environment:
+      SS_SERVER_HOST: '0.0.0.0'
+      SS_SERVER_PORT: '8388'
+      SS_SERVER_PASS: 'XGQRyJ3jLGumnGGkWsALWozv'
+      SS_SERVER_METHOD: 'aes-256-cfb'
+  ss-local:
+    container_name: 'ss-local'
+    build: './ss-local'
+    image: 'ss-local'
+    expose:
+      - '1080'
+    environment:
+      SS_LOCAL_HOST: '0.0.0.0'
+      SS_LOCAL_PORT: '1080'
+      SS_SERVER_HOST: 'ss-server'
+      SS_SERVER_PORT: '8388'
+      SS_SERVER_PASS: 'XGQRyJ3jLGumnGGkWsALWozv'
+      SS_SERVER_METHOD: 'aes-256-cfb'
+  privoxy:
+    
+  nginx:
+    container_name: 'nginx'
+    image: 'nginx:1.12'
+    ports:
+      - '80:80'

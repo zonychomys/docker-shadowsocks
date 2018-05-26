@@ -1,0 +1,7 @@
+{
+    "server": "${SS_SERVER_HOST}",
+    "server_port": ${SS_SERVER_PORT},
+    "password": "${SS_SERVER_PASS}",
+    "method": "${SS_SERVER_METHOD}",
+    "timeout": 300
+}

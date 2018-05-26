@@ -1,0 +1,10 @@
+{
+    "server": "${SS_SERVER_HOST}",
+    "server_port": ${SS_SERVER_PORT},
+    "local_address": "${SS_LOCAL_HOST}",
+    "local_port": ${SS_LOCAL_PORT},
+    "password": "${SS_SERVER_PASS}",
+    "method": "${SS_SERVER_METHOD}",
+    "fast_open": false,
+    "timeout": 300
+}
